@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  color: #13143c;
+}
+
+body {
+  background-color: #dfdfdf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .card {
+  z-index: 1;
+  box-sizing: border-box;
+  width: 1051px;
+  height: 418px;
+  background-color: #fffaf2;
+  border-radius: 29px;
+  padding: 42px;
+}
+.wrapper .card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.wrapper .card-container-section-1 {
+  height: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .card-container-section-1-image {
+  background-image: url("./Assets/ProfileImg.png");
+  width: 100px;
+  height: 100px;
+  border-radius: 39px;
+}
+.wrapper .card-container-section-1-details {
+  width: 289px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.wrapper .card-container-section-1-details h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+.wrapper .card-container-section-1-details h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.wrapper .card-container-section-1-details p {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+.wrapper .card-container-section-1-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 304px;
+}
+.wrapper .card-container-section-1-links-link {
+  box-sizing: border-box;
+  padding: 16px;
+  height: 64px;
+  width: 64px;
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 19px;
+}
+.wrapper .card-container-section-1-links-link-icon {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .card-container-section-2 {
+  height: 80%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.wrapper .card-container-section-2-organizations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 414px;
+  height: 53px;
+}
+.wrapper .card-container-section-2-organizations-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .card-container-section-2-organizations-info-text {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+.wrapper .card-container-section-2-organizations-info-icon {
+  height: 32px;
+  width: 32px;
+}
+.wrapper .card-container-section-2-organizations-graph {
+  width: 414px;
+  height: 13px;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper .card-container-section-2-organizations-graph-left {
+  border-radius: 10px 0 0 10px;
+  background-color: #f17a37;
+  width: 75%;
+  height: 100%;
+}
+.wrapper .card-container-section-2-organizations-graph-right {
+  border-radius: 0 10px 10px 0;
+  background-color: #dfdfdf;
+  width: 25%;
+  height: 100%;
+}
+.wrapper .card-container-section-2-followers {
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.wrapper .card-container-section-2-followers > p {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 400;
+}
+.wrapper .card-container-section-2-followers > p span {
+  font-weight: 700;
+  color: #000;
+}
+.wrapper .card-container-section-2-followers-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 191px;
+  height: 65px;
+  background-color: #13143c;
+  border-radius: 8px;
+}
+.wrapper .card-container-section-2-followers-button > p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.wrapper .shadow {
+  height: 100px;
+  width: 968px;
+  background-color: rgba(0, 0, 0, 0.1411764706);
+  margin-top: -60px;
+  border-radius: 33px;
+  filter: blur(44px);
+  z-index: 0;
+}/*# sourceMappingURL=styles.css.map */
