@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  color: #132b50;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 85px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.card-reset-password > a {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.card-form > h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+}
+.card-form-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.card-form-user-image {
+  background-image: url("./Assets/image78x78.png");
+  height: 78px;
+  width: 78px;
+  border-radius: 50%;
+}
+.card-form-user-info-position {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+.card-form-user-info-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 4px;
+}
+.card-form-password {
+  width: 414px;
+  height: 84px;
+}
+.card-form-password > label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.card-form-password-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+.card-form-password-container-input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  border: 1px solid #132b50;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.card-form-password-container-input > input {
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background: none;
+}
+.card-form-password-container-input-icon {
+  height: 27px;
+  width: 27px;
+}
+.card-form-password-container-icon {
+  height: 27px;
+  width: 27px;
+}
+.card-form-controls {
+  width: 371px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.card-form-controls-stay {
+  width: 252px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.card-form-controls-stay > p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.card-form-controls-stay > .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 36px;
+}
+.card-form-controls-stay > .switch > input {
+  display: none;
+}
+.card-form-controls-stay > .switch > input:checked + .slider:before {
+  transform: translateX(23px);
+}
+.card-form-controls-stay > .switch > .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #132b50;
+  border-radius: 44px;
+  transition: 0.4s;
+}
+.card-form-controls-stay > .switch > .slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 7px;
+  bottom: 7px;
+  background-color: #132b50;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.card-form-controls-button {
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #132b50;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  border-radius: 8px;
+}
+.card-form-controls-button > p {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}/*# sourceMappingURL=styles.css.map */
