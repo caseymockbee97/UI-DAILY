@@ -81,8 +81,9 @@ body {
           width: 463px;
           min-height: 58px;
           background-color: #ffffff;
+          border: 1px solid #ffffff;
           border-radius: 8px;
-          &.active-form-row {
+          &:hover {
             border: 1px solid #d2d9ef;
           }
           &-icon {

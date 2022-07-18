@@ -57,9 +57,10 @@ body {
   width: 463px;
   min-height: 58px;
   background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 8px;
 }
-.card-main-preferences-form-row.active-form-row {
+.card-main-preferences-form-row:hover {
   border: 1px solid #d2d9ef;
 }
 .card-main-preferences-form-row-icon {
