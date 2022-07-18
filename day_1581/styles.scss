@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+$main-color: #131339;
+$secondary-color: #f1f4fd;
+$background-color: #fafbff;
+
+@mixin flex-row($align: 0, $justify: 0, $gap: 0) {
+  display: flex;
+  flex-direction: row;
+  @if $align != 0 {
+    align-items: $align;
+  }
+  @if $justify != 0 {
+    justify-content: $justify;
+  }
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+@mixin flex-column($align: 0, $justify: 0, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  @if $align != 0 {
+    align-items: $align;
+  }
+  @if $justify != 0 {
+    justify-content: $justify;
+  }
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+@mixin general-button {
+  background-color: $main-color;
+  color: #ffffff;
+  padding: 12px 24px 12px 24px;
+  width: fit-content;
+  font-size: 14px;
+  border-radius: 32px;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  color: $main-color;
+}
+
+body {
+  @include flex-column($align: center);
+  background-color: $secondary-color;
+}
+.card {
+  position: relative;
+  min-height: 484px;
+  padding-bottom: 85px;
+  padding-right: 85px;
+  &-main {
+    position: relative;
+    top: 85px;
+    left: 85px;
+    @include flex-column($gap: 40px);
+    background-color: $background-color;
+    padding: 54px;
+    border-radius: 32px;
+    z-index: 2;
+    &-preferences {
+      @include flex-column($gap: 16px);
+      &-header {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+      &-form {
+        &-row {
+          @include flex-row($gap: 16px, $align: center);
+          box-sizing: border-box;
+          padding: 16px;
+          width: 463px;
+          min-height: 58px;
+          background-color: #ffffff;
+          border-radius: 8px;
+          &-icon {
+            & > svg {
+              height: 22px;
+              width: 22px;
+            }
+          }
+          &-desc {
+            flex-grow: 1;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+          }
+          &-default {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(19, 19, 57, 0.5);
+          }
+          &-toggle {
+            flex-shrink: 0;
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 26px;
+            & > input {
+              display: none;
+              &:checked + .card-main-preferences-form-row-toggle-slider:before {
+                transform: translateX(18px);
+                background-color: #f1f4fd;
+              }
+              &:checked + .card-main-preferences-form-row-toggle-slider {
+                background-color: $main-color;
+              }
+            }
+            &-slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              border: 1px solid #d2d9ef;
+              background-color: #f1f4fd;
+              border-radius: 32px;
+              transition: 0.4s;
+
+              &:before {
+                position: absolute;
+                content: '';
+                height: 18px;
+                width: 18px;
+                left: 3px;
+                bottom: 3px;
+                background-color: $main-color;
+                border-radius: 50%;
+                transition: 0.4s;
+              }
+            }
+          }
+        }
+      }
+
+      &-btns {
+        @include flex-row($gap: 8px);
+        &-btn {
+          @include general-button();
+        }
+      }
+    }
+    &-about {
+      width: 463px;
+      @include flex-column($gap: 16px);
+      &-header {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      &-info {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+      }
+      &-button {
+        @include general-button();
+      }
+    }
+  }
+  &-background-card {
+    position: absolute;
+    top: 0;
+    background-color: $main-color;
+    width: 400px;
+    height: 484px;
+    border-radius: 80px;
+  }
+}
