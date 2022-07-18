@@ -136,6 +136,7 @@ body {
   width: fit-content;
   font-size: 14px;
   border-radius: 32px;
+  cursor: pointer;
 }
 .card-main-about {
   width: 463px;
@@ -164,6 +165,7 @@ body {
   width: fit-content;
   font-size: 14px;
   border-radius: 32px;
+  cursor: pointer;
 }
 .card-background-card {
   position: absolute;
