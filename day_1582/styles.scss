@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+$main-color: #0d2167;
+$secondary-color: #5a6793;
+
+@mixin flex-row($align: 0, $justify: 0, $gap: 0) {
+  display: flex;
+  flex-direction: row;
+  @if $align != 0 {
+    align-items: $align;
+  }
+  @if $justify != 0 {
+    justify-content: $justify;
+  }
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+@mixin flex-column($align: 0, $justify: 0, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  @if $align != 0 {
+    align-items: $align;
+  }
+  @if $justify != 0 {
+    justify-content: $justify;
+  }
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  color: $main-color;
+}
+
+body {
+  background-color: #c6cce0;
+  @include flex-column($align: center);
+}
+
+.card {
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 51px 93px #0f09531a;
+
+  @include flex-column($align: flex-start, $gap: 16px);
+  &-main {
+    @include flex-column($align: flex-start, $gap: 40px);
+    &-container {
+      @include flex-column($align: flex-start, $gap: 32px);
+      width: 1054px;
+      &-nav {
+        @include flex-row();
+        &-item {
+          @include flex-column($align: center);
+          color: #5a6793;
+          font-size: 16px;
+          font-weight: 500;
+
+          &-text {
+            padding: 16px;
+          }
+
+          &.active-nav-item {
+            color: $main-color;
+
+            &::after {
+              content: ' ';
+              background-color: $main-color;
+              width: 100%;
+              height: 4px;
+              border-radius: 12px;
+            }
+          }
+        }
+      }
+      &-params {
+        @include flex-row($align: center, $gap: 16px);
+        width: 1054px;
+
+        &-label {
+          flex-grow: 1;
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        &-btn-group {
+          @include flex-row($gap: 8px);
+          &-btn {
+            @include flex-row($gap: 8px, $align: center);
+            padding: 16px;
+            border: solid 1px #c6cce0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &.filled-btn {
+              background-color: #0d2167;
+              border: none;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    &-search {
+      width: 1070px; //constant variable
+      @include flex-row($gap: 21px, $align: center);
+      &-bar {
+        flex-grow: 1;
+        @include flex-row($align: center, $gap: 8px);
+        padding: 16px;
+        border: 1px solid #c6cce0;
+        border-radius: 8px;
+        & > label > svg {
+          height: 32px;
+          width: 32px;
+          cursor: pointer;
+        }
+        & > input {
+          flex-grow: 1;
+          border: none;
+          background: none;
+          font-size: 16px;
+          font-weight: 500;
+          &::placeholder {
+            color: $secondary-color;
+          }
+        }
+      }
+      &-navigation {
+        @include flex-row($align: center, $gap: 8px);
+        padding: 16px;
+        & > p {
+          font-size: 16px;
+          margin: 0;
+        }
+        & > span {
+          width: 32px;
+          height: 32px;
+          & > svg {
+            cursor: pointer;
+          }
+        }
+      }
+      &-settings {
+        padding: 16px;
+        & > svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  &-filters {
+    @include flex-row($gap: 6px);
+    &-param {
+      @include flex-row($align: center, $gap: 8px);
+      padding: 8px;
+      border: solid 1px $main-color;
+      border-radius: 8px;
+      & > span {
+        font-size: 14px;
+        font-weight: 600;
+        & > svg {
+          height: 22px;
+          width: 22px;
+          cursor: pointer;
+        }
+      }
+      &.clear-button {
+        padding-left: 16px;
+        padding-right: 16px;
+        border: solid 1px #c6cce0;
+        & > span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
