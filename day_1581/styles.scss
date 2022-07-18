@@ -63,6 +63,7 @@ body {
     padding: 54px;
     border-radius: 32px;
     z-index: 2;
+    box-shadow: 20px 34px 74px rgba(21, 21, 106, 0.07);
     &-preferences {
       @include flex-column($gap: 16px);
       &-header {
@@ -72,6 +73,7 @@ body {
         padding: 0;
       }
       &-form {
+        @include flex-column($align: center, $gap: 4px);
         &-row {
           @include flex-row($gap: 16px, $align: center);
           box-sizing: border-box;
@@ -80,7 +82,11 @@ body {
           min-height: 58px;
           background-color: #ffffff;
           border-radius: 8px;
+          &.active-form-row {
+            border: 1px solid #d2d9ef;
+          }
           &-icon {
+            cursor: pointer;
             & > svg {
               height: 22px;
               width: 22px;

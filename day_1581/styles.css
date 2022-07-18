@@ -28,6 +28,7 @@ body {
   padding: 54px;
   border-radius: 32px;
   z-index: 2;
+  box-shadow: 20px 34px 74px rgba(21, 21, 106, 0.07);
 }
 .card-main-preferences {
   display: flex;
@@ -40,6 +41,12 @@ body {
   margin: 0;
   padding: 0;
 }
+.card-main-preferences-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
 .card-main-preferences-form-row {
   display: flex;
   flex-direction: row;
@@ -51,6 +58,12 @@ body {
   min-height: 58px;
   background-color: #ffffff;
   border-radius: 8px;
+}
+.card-main-preferences-form-row.active-form-row {
+  border: 1px solid #d2d9ef;
+}
+.card-main-preferences-form-row-icon {
+  cursor: pointer;
 }
 .card-main-preferences-form-row-icon > svg {
   height: 22px;
